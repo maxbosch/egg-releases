@@ -31,6 +31,7 @@ import urllib.parse
 import urllib.request
 import webbrowser
 from pathlib import Path
+from library_io import merge_items
 
 ROOT = Path(__file__).parent
 
@@ -336,8 +337,8 @@ def main():
         if not pagination:
             break
 
-    merged = list(existing.values()) + new_items
-    ITEMS.write_text(json.dumps(merged, indent=1))
+    merged = merge_items(ITEMS, new_items,
+                         videos={key: item.get("video") for key, item in existing.items()})
     print(f"\nDone. {len(new_items)} new items, {len(merged)} total.")
     if backfilled[0]:
         print(f"Backfilled video for {backfilled[0]} existing items.")

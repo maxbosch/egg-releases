@@ -30,6 +30,7 @@ import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from library_io import merge_items
 
 ROOT = Path(__file__).parent
 
@@ -214,6 +215,7 @@ def main():
 
     lock = threading.Lock()
     state = {"done": 0, "failed": 0}
+    scans = {}
     total = len(todo)
 
     def work(it):
@@ -248,10 +250,11 @@ def main():
         # above is the slow part and runs outside the lock.
         with lock:
             it["scan"] = scan
+            scans[it["id"]] = scan
             state["done"] += 1
             n = state["done"]
             if n % 25 == 0 or n == total:
-                ITEMS.write_text(json.dumps(items, indent=1))
+                merge_items(ITEMS, scans=scans)
                 print(f"  {n}/{total} scanned "
                       f"({state['failed']} failed) — saved")
 
@@ -261,7 +264,7 @@ def main():
     except KeyboardInterrupt:
         print("\ninterrupted — saving what finished")
 
-    ITEMS.write_text(json.dumps(items, indent=1))
+    merge_items(ITEMS, scans=scans)
     print(f"\nDone. Scanned {state['done']} items, {state['failed']} failed.")
     if state["failed"]:
         print("Re-run to retry the failures — they stay unscanned.")

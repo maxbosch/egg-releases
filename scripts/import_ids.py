@@ -23,6 +23,7 @@ import time
 import urllib.error
 import urllib.parse
 from pathlib import Path
+from library_io import merge_items
 
 import fetch_bookmarks as fb   # reuse auth, paging, download, variant picking
 
@@ -201,8 +202,7 @@ def main():
         # long run discards all the metadata fetched so far, and re-fetching
         # costs real money because X bills per post returned.
         if not survey and new_items:
-            fb.ITEMS.write_text(
-                json.dumps(list(existing.values()) + new_items, indent=1))
+            merge_items(fb.ITEMS, new_items)
 
         time.sleep(0.5)   # be gentle between batches
 
@@ -219,8 +219,7 @@ def main():
         print("Re-run with e.g.  --since 2023-01-01  to import just those.")
         return
 
-    merged = list(existing.values()) + new_items
-    fb.ITEMS.write_text(json.dumps(merged, indent=1))
+    merged = merge_items(fb.ITEMS, new_items)
     print(f"\nDone. {len(new_items)} new items, {len(merged)} total.")
     print(f"  {no_media} posts had no image or video (text/link only)")
     print(f"  {missing} posts unavailable (deleted, protected or suspended)")

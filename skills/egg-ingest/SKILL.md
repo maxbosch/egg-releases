@@ -60,8 +60,10 @@ One full example. Required fields: `id`, `file`, `source`, `saved_at`,
 
 - Write media into `media/` with a filename derived from the item id or a
   content hash — never a name that can collide.
-- Append to `items.json` atomically: read → append → write to a temp file →
-  rename over the original. Never truncate-then-write.
+- Hold an exclusive `flock` on `.items.lock` across read → merge → write temp
+  → rename of `items.json`. Use `scripts/library_io.py:merge_items` so scans,
+  desktop feed imports, and edits cannot overwrite one another. Never save
+  a stale snapshot or truncate-then-write.
 - **Never touch `folders.json`.** Hearts and hides are the user's curation;
   clobbering them destroys the signal the taste skill is built from.
 - Never overwrite an existing item's `scan`, `tags`, or `note`. Merging means
@@ -89,13 +91,14 @@ ANTHROPIC_API_KEY=sk-ant-... python3 scripts/scan.py
 ## Writing a new importer
 
 Three steps: get media files into `media/`, build item dicts, merge-append
-into `items.json`. Template:
+into `items.json`. Save this template in `scripts/`, beside `library_io.py`:
 
 ```python
 #!/usr/bin/env python3
 """Import images from a local folder into the Egg library."""
 import hashlib, json, os, shutil, subprocess, sys, time
 from pathlib import Path
+from library_io import merge_items
 
 def library():
     if os.environ.get("EGG_LIBRARY"):
@@ -122,10 +125,7 @@ for src in Path(sys.argv[1]).glob("*.[jp][pn]g"):
                 "text": "", "alt_text": "", "media_type": "photo",
                 "saved_at": now, "imported_at": now,
                 "tags": [], "note": "", "scan": None})
-merged = list(existing.values()) + new
-tmp = ITEMS.with_suffix(".json.tmp")
-tmp.write_text(json.dumps(merged, indent=1))
-tmp.rename(ITEMS)
+merge_items(ITEMS, new)
 print(f"{len(new)} new items. Next: python3 scripts/scan.py")
 ```
 
