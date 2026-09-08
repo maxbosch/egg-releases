@@ -37,7 +37,7 @@ replace the app" — auto-update arrives with the signed build.
 Open the desktop app and captures already in the companion feed appear automatically.
 New captures arrive within a few seconds while the desktop app is open. Both apps
 must use the updated builds. Old captures whose originals are missing use available
-previews and show a warning. Run the scanner separately to describe and index them.
+previews. Run the scanner separately to describe and index them.
 
 ## Get your X bookmarks in
 
