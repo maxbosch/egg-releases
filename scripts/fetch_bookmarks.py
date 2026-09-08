@@ -36,23 +36,23 @@ ROOT = Path(__file__).parent
 
 
 def resolve_library():
-    """Locate the Coop library. The app owns this setting; scripts follow it.
+    """Locate the Egg library. The app owns this setting; scripts follow it.
 
-    1. COOP_LIBRARY env var, if set
+    1. EGG_LIBRARY env var, if set
     2. the app's LibraryPath default, mirrored so scripts and agents can find it
     3. the default location
     """
-    env = os.environ.get("COOP_LIBRARY")
+    env = os.environ.get("EGG_LIBRARY")
     if env:
         return Path(env).expanduser()
     try:
-        r = subprocess.run(["defaults", "read", "maxbos.ch.Coop", "LibraryPath"],
+        r = subprocess.run(["defaults", "read", "com.feedegg.egg", "LibraryPath"],
                            capture_output=True, text=True)
         if r.returncode == 0 and r.stdout.strip():
             return Path(r.stdout.strip()).expanduser()
     except OSError:
         pass
-    return Path.home() / "Library" / "Application Support" / "Coop" / "Library"
+    return Path.home() / "Library" / "Application Support" / "Egg" / "Library"
 
 
 LIB = resolve_library()

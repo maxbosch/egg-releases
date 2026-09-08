@@ -1,21 +1,21 @@
 ---
-name: coop-ingest
+name: egg-ingest
 description: >-
-  Write items into a Coop library — import bookmarks or any image source,
+  Write items into a Egg library — import bookmarks or any image source,
   scan them with Claude, and distil hearted items into a taste skill. Load
-  this before touching a Coop library folder from an agent or script.
+  this before touching a Egg library folder from an agent or script.
 ---
 
-# Coop ingest — the agent contract
+# Egg ingest — the agent contract
 
 Anything that writes valid items into the library folder is an importer,
 including you. This file is the whole contract.
 
 ## Where the library is
 
-1. `$COOP_LIBRARY` if set, else
-2. `defaults read maxbos.ch.Coop LibraryPath`, else
-3. `~/Library/Application Support/Coop/Library`
+1. `$EGG_LIBRARY` if set, else
+2. `defaults read com.feedegg.egg LibraryPath`, else
+3. `~/Library/Application Support/Egg/Library`
 
 Inside it: `items.json` (an array of items), `folders.json` (an overlay of
 folder membership — not yours, see rules), and `media/` (the files).
@@ -93,18 +93,18 @@ into `items.json`. Template:
 
 ```python
 #!/usr/bin/env python3
-"""Import images from a local folder into the Coop library."""
+"""Import images from a local folder into the Egg library."""
 import hashlib, json, os, shutil, subprocess, sys, time
 from pathlib import Path
 
 def library():
-    if os.environ.get("COOP_LIBRARY"):
-        return Path(os.environ["COOP_LIBRARY"]).expanduser()
-    r = subprocess.run(["defaults", "read", "maxbos.ch.Coop", "LibraryPath"],
+    if os.environ.get("EGG_LIBRARY"):
+        return Path(os.environ["EGG_LIBRARY"]).expanduser()
+    r = subprocess.run(["defaults", "read", "com.feedegg.egg", "LibraryPath"],
                        capture_output=True, text=True)
     if r.returncode == 0 and r.stdout.strip():
         return Path(r.stdout.strip())
-    return Path.home() / "Library/Application Support/Coop/Library"
+    return Path.home() / "Library/Application Support/Egg/Library"
 
 LIB = library(); MEDIA = LIB / "media"; ITEMS = LIB / "items.json"
 MEDIA.mkdir(parents=True, exist_ok=True)
@@ -131,7 +131,7 @@ print(f"{len(new)} new items. Next: python3 scripts/scan.py")
 
 ## The taste skill
 
-Heart things in Coop first (50+ makes it worth reading), then:
+Heart things in Egg first (50+ makes it worth reading), then:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-... python3 scripts/make_skill.py --dry-run   # cost preview
