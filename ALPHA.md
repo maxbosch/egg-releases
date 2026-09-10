@@ -13,24 +13,9 @@ on your Mac.
 3. Egg → Settings → paste your Anthropic API key
    (console.anthropic.com → API keys). It's stored in your Keychain.
 
-### First launch (this build is unsigned — one extra step)
-
-The alpha build isn't notarized yet, so macOS will refuse to open it the
-first time ("Egg is damaged" or "cannot be opened"). Either path works:
-
-- Try to open Egg once, then go to **System Settings → Privacy & Security**,
-  scroll down, and click **Open Anyway** next to the Egg message. Open Egg
-  again and confirm.
-- Or, in Terminal:
-
-  ```bash
-  xattr -d com.apple.quarantine /Applications/Egg.app
-  ```
-
-  then open Egg normally.
-
-This is once per install. Updates this week are "download the new DMG and
-replace the app" — auto-update arrives with the signed build.
+The build is signed and notarized — it opens like any Mac app, no
+warnings. Updates arrive automatically in-app (Egg → Check for Updates…
+to check by hand).
 
 ## Capture and browse in one app
 
