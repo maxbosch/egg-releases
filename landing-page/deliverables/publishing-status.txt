@@ -1,0 +1,9 @@
+Egg playable landing page — saved as version 2.
+The production build and TypeScript check passed. Four tests passed: collection uniqueness/completion, scroll phases, matching shell geometry, and phone/desktop camera bounds.
+Browser interaction and visual testing have not been performed.
+A private deployment was requested. Three status requests failed with HTTP 522, HTTP 525, and HTTP 522 transport errors; the final deployment outcome is unconfirmed.
+Site: appgprj_6aa0410336148191a3ea873b156d2238
+Version: appgprj_6aa0410336148191a3ea873b156d2238~appgver_570ce13b83548191a8598e1c9dd80ae7
+Deployment: appgdep_6aa04800a1e881919ee995ead673495a
+The self-contained egg-playable.html includes all game code and needs no server or network downloads. Open it in a WebGL-capable browser. Keyboard collection is available if 3D is unavailable.
+Early-access signup still needs a supplied destination.
