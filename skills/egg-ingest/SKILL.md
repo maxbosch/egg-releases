@@ -75,8 +75,10 @@ One full example. Required fields: `id`, `file`, `source`, `saved_at`,
 They live in `scripts/` in this repo. Python 3.9+, standard library only.
 
 ```bash
-# X bookmarks (OAuth PKCE, browser window opens):
-X_CLIENT_ID=<client id from ALPHA.md> python3 scripts/fetch_bookmarks.py
+# X bookmarks (OAuth PKCE, browser window opens). The client id is the
+# user's own — from their X developer app; ALPHA.md has the 3-minute
+# setup. Never use a shared or shipped client id.
+X_CLIENT_ID=<the user's own client id> python3 scripts/fetch_bookmarks.py
 
 # Full-history backfill (the bookmarks API caps out):
 #   1. paste scripts/harvest_bookmark_ids.js into the console on
