@@ -3,6 +3,67 @@
     <channel>
         <title>Egg</title>
         <item>
+            <title>0.1.5</title>
+            <pubDate>Fri, 11 Sep 2026 13:06:29 -0400</pubDate>
+            <link>https://feedegg.com/</link>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <sparkle:releaseNotesLink>https://feedegg.com/Egg-0.1.5.md</sparkle:releaseNotesLink>
+            <enclosure url="https://feedegg.com/Egg-0.1.5.dmg" length="4120058" type="application/octet-stream" sparkle:edSignature="aGfA6Trq2tXwNDW5J+mxk1JF7C35C/JqKqc8Im7Yb8KuBjcmrxqJabFluEQOYzaGvGKVr1YyFgxbmanRIMyZBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://feedegg.com/Egg32-23.delta" sparkle:deltaFrom="23" length="1664618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ymzlrP7YP+3iPzknmdQ8bHSejQ1iZG7h4HCDxhH7JQI1YsvHRzPqgGFkP0/DkHO0cnl0FJsyjBt1MqAzXk5oCg=="/>
+                <enclosure url="https://feedegg.com/Egg32-21.delta" sparkle:deltaFrom="21" length="1673714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MycQWgJ/qP2fQNmBsWw4yM/yfF1SAlYY9YdqcarDWde4eirUjgYy1+fM8Cn1KeiSyklD3PjBMF0F20zdVVI8Ag=="/>
+                <enclosure url="https://feedegg.com/Egg32-18.delta" sparkle:deltaFrom="18" length="1675562" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mb0qfJWapEtMAEUTPi8ZiuLw8PXvT9h25X0S21qqmlnfnusyJxiPbVseD0YQcV4VgqBp5WFyy7zSg4aPoL/6Bw=="/>
+                <enclosure url="https://feedegg.com/Egg32-13.delta" sparkle:deltaFrom="13" length="1675682" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="FwTXJi8ZjHrYujKAZ2qRqvxPGf17lGnIz0L1qVZ4xDhEatb8ylKzgMlGL9LMXwdyMf6m/sb3RYIfzxOjsVVfAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.3</title>
+            <pubDate>Thu, 10 Sep 2026 21:52:44 -0400</pubDate>
+            <link>https://feedegg.com/</link>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://feedegg.com/Egg-0.1.3.dmg" length="3492820" type="application/octet-stream" sparkle:edSignature="450TyU1Ceh87bdewOeglXscPYEWHuxOuX2UrUHgMauwZGR7pLNekLP16r1VHAnH0Ad+jahmh6TKKgE1ZhdyoDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://feedegg.com/Egg23-21.delta" sparkle:deltaFrom="21" length="962202" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GEmD33+tpMtIswkIQ029HbxjKaBau+nRCFe43wJ5eBjtYAT8jmxe5rxaan6iyBI6r+suBwgISlFLKm4o0uTfCw=="/>
+                <enclosure url="https://feedegg.com/Egg23-18.delta" sparkle:deltaFrom="18" length="963594" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="FOMjqkN68fs/0i5oy1GVVS4IYN+QHzayPPjNtQc3u5sm+KByb5JFSsuV8wZ8asuyCbvMPWDzaOEXqLuZE76xDw=="/>
+                <enclosure url="https://feedegg.com/Egg23-13.delta" sparkle:deltaFrom="13" length="964862" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KAgRx+Pj1zawvMHegOAQRGVvDWatBcU5hg7FCQ+/jkWLY36zomInSbGnUSNkPQldFlFdoaEDQamJOAnK3o50AQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.3</title>
+            <pubDate>Thu, 10 Sep 2026 21:52:44 -0400</pubDate>
+            <link>https://feedegg.com/</link>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://feedegg.com/Egg-0.1.3.dmg" length="2754236" type="application/octet-stream" sparkle:edSignature="H+ew0o0Y9rkIFPCNB/fI+zPv2DvYI6fZvCMrS3KlWRnLw4O/YlNcK8yQuhy7uYsifvVkSVZybSQL3Hy+h6C/Aw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://feedegg.com/Egg22-21.delta" sparkle:deltaFrom="21" length="264770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eAXMjtk3nl9cMUJvTpABiwN5xKYS1dA9dhrTBb0U3e2QyEj0lcflrcBA/UYFnt7+vAPvwyzcnH2KiZgDxw/MDA=="/>
+                <enclosure url="https://feedegg.com/Egg22-18.delta" sparkle:deltaFrom="18" length="339706" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uld8Nh8zB1bStz37kLLcTSkWGC7lQ9AXMOEQ4W/hX4VkhHrUMMsXhSn4Cwoq+v+Sh7Fp2acN29ukdqcGd5u4Bg=="/>
+                <enclosure url="https://feedegg.com/Egg22-13.delta" sparkle:deltaFrom="13" length="340146" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oOzFyEpFnNBrnMZutFubYwg4mFZlDufP6s2tXDN15B/sXoHSkS94yNur3yQKpfdzyznf+TFL/Vr83Zi7XdU2Ag=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.2</title>
+            <pubDate>Thu, 10 Sep 2026 20:30:22 -0400</pubDate>
+            <link>https://feedegg.com/</link>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://feedegg.com/Egg-0.1.2.dmg" length="3025154" type="application/octet-stream" sparkle:edSignature="6uAiYnvaH6QYF3mQPQJNPMkNhrfXNXnUIhc7+LIM4plX2uKTmeePhvbFKZnekmUr6+07D2+gj8rTZAtEWwulCg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://feedegg.com/Egg21-18.delta" sparkle:deltaFrom="18" length="87694" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0s9Kn2Z0yU/6QWTn1bB4oVAc1tbQi64gAhGDsUkM5L+hEZmiZ0RDYIEHJazaIcmZn/PvPp2I8iGOraF/Fo/wDw=="/>
+                <enclosure url="https://feedegg.com/Egg21-13.delta" sparkle:deltaFrom="13" length="87658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MAk+WgA62AknEkBArETleg3QF22DXfA85+gpwi33SkkC5pjaq7nkKnV9JKY4z8XcqsUHGLWF3gb86yNUE5xwBQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.1</title>
             <pubDate>Thu, 10 Sep 2026 19:13:32 -0400</pubDate>
             <link>https://feedegg.com/</link>
@@ -14,16 +75,6 @@
             <sparkle:deltas>
                 <enclosure url="https://feedegg.com/Egg18-13.delta" sparkle:deltaFrom="13" length="11822" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="osMzMbmozrgdHXV0zsrXhbqcWcQWAsLH7kATQ42bktsosqM6tFS3S2moOQrh/FXQ2aAu6IbILjpXe7gYppyhCQ=="/>
             </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.1.0</title>
-            <pubDate>Thu, 10 Sep 2026 19:05:36 -0400</pubDate>
-            <link>https://feedegg.com/</link>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://feedegg.com/Egg-0.1.0.dmg" length="2672020" type="application/octet-stream" sparkle:edSignature="jxKF49GfTBi3NFA9GmvHeFCadTicNmZ6kb7C8O4opH3lLlb3h50EjeStnVYKGfnq+jfQPo98TpEWOmVMwLXSDQ=="/>
         </item>
     </channel>
 </rss>

@@ -1,5 +1,21 @@
 # Egg changelog
 
+## 0.1.5 — 2026-09-11
+
+The glass release.
+
+- The shelf moves again: dragging its header, background, or any edge works
+  everywhere — clicks no longer fall through the glass.
+- Purely visual cards in the pile; names and details live in the rows.
+- The Active band: live sandboxes with uptime, this Mac's dev servers
+  (open, quit, or take one into a sandbox), and idle prototypes one click
+  from booting.
+- The library window wears the glass: transparent window, floating native
+  toolbar, content scrolling beneath; menus across the app picked up icons.
+- Empty categories are drop targets again, the selection bar speaks in
+  Music-style icons, and a pass of small paddings, truncations, and hover
+  states.
+
 ## 0.1.0 — 2026-09-10
 
 First alpha. Signed, notarized, auto-updating.

@@ -25,11 +25,35 @@ Captures appear in the library within a few seconds. Closing the library window
 keeps capture running; choose **Open Egg** from the menu bar to return to it.
 Choose **Quit Egg** when you want to stop both.
 
+**Don't see the egg icon?** A full menu bar hides it (macOS drops icons that
+don't fit, especially on notched MacBooks), and menu bar managers like
+Bartender or Ice stash new icons in their hidden section until you move them
+out. Egg is still running — the library window's buttons and **Egg →
+Settings** reach everything, and ⌘-drag menu bar icons to make room.
+
 If you used the separate menu-bar app, quit it before opening this build. Your
 existing captures and capture preferences carry over. macOS may ask you to grant
 capture permissions again. Set your API key once in **Settings → Library**;
 shortcuts, gestures, Messages, and backend settings are in **Settings → Capture**.
 Run the scanner separately to describe and index captures.
+
+## Capture from your phone (iMessage)
+
+Egg can watch one iMessage address and turn anything you text it — photos,
+screenshots, links — into library captures. Setup once, about two minutes:
+
+1. Give your Apple ID a second address it can receive iMessages at
+   (an iCloud alias works). On your Mac: **Messages → Settings → iMessage →
+   Send & Receive**, and make sure the new address is checked there.
+2. In Egg: **Settings → Capture → Messages**, enter that address under
+   **Egg's address**. Egg watches only this address, never your
+   conversations.
+3. Click **Check Messages Access…** in the same pane. Reading Messages
+   needs **Full Disk Access** (macOS has no prompt for it) — the dialog
+   opens the right System Settings pane; flip the toggle for Egg, then
+   quit and relaunch Egg.
+4. From your phone, send a photo to that address. It lands in your own
+   Messages, Egg picks it up, and it appears in the library feed.
 
 ## Get your stuff in
 
