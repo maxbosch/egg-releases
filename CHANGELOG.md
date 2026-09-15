@@ -1,5 +1,26 @@
 # Egg changelog
 
+## 0.1.8 — 2026-09-15
+
+The library looks like your work now, and takes a drop from anywhere.
+
+- Drag and drop into the library works. It only ever worked on an empty
+  library — with anything in it the grid had no drop target, so dropping a
+  file onto your own collection did nothing. Holding something over the
+  window now blurs the grid and previews what you are carrying, stacked
+  with a count when there are several.
+- The grid is a wall of work: tiles keep their own proportions instead of
+  being letterboxed into one shape on a grey plate, and artwork fills its
+  tile edge to edge. Title and author are gone from under each piece (the
+  lightbox carries them) — what is left is the work, a glyph when something
+  isn't an image, and select and heart on hover.
+- The selection bar's icons are visible again. White glyphs on clear glass
+  vanished wherever a pale thumbnail sat behind the bar; the library's glass
+  now carries the same wash the shelf's has.
+- The window resizes properly. The grid decided its own width from its own
+  contents, which slid tiles under the sidebar and pulled the floating
+  search bar out of position.
+
 ## 0.1.7 — 2026-09-15
 
 The setup release: one checklist, and scanning that doesn't need a terminal.
