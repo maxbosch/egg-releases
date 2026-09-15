@@ -2,6 +2,10 @@
 """
 Import your X (Twitter) bookmarks into the local library.
 
+Egg can do all of this for you: Set Up Egg > X bookmarks. This script is the
+same import for anyone who would rather stay in a terminal — it shares the
+app's client id and token file, so the two are interchangeable.
+
 Setup (one time):
   1. Create an app at https://console.x.com
   2. In the app's auth settings, enable OAuth 2.0 with:
@@ -10,6 +14,7 @@ Setup (one time):
        - Scopes: tweet.read users.read bookmark.read offline.access
   3. Copy the Client ID and run:
        X_CLIENT_ID=your_client_id python3 fetch_bookmarks.py
+     (or connect once in Egg, and run it with no env var at all)
 
 The script opens a browser window for you to authorize, then pulls all
 bookmarks, downloads image media to library/media/, and merges items
@@ -61,7 +66,31 @@ MEDIA = LIB / "media"
 ITEMS = LIB / "items.json"
 TOKENS = LIB / ".tokens.json"
 
-CLIENT_ID = os.environ.get("X_CLIENT_ID", "")
+
+def resolve_client_id():
+    """The X app's client id. The app and this script share one value.
+
+    1. X_CLIENT_ID env var, if set
+    2. the app's xClientID default, written when you connect X in Egg
+
+    A native-app client id is public by design (it travels in the redirect;
+    PKCE is what protects the exchange), so defaults is the right home for it
+    — and one home means connecting in the app also configures this script.
+    """
+    env = os.environ.get("X_CLIENT_ID")
+    if env:
+        return env
+    try:
+        r = subprocess.run(["defaults", "read", "com.feedegg.egg", "xClientID"],
+                           capture_output=True, text=True)
+        if r.returncode == 0 and r.stdout.strip():
+            return r.stdout.strip()
+    except OSError:
+        pass
+    return ""
+
+
+CLIENT_ID = resolve_client_id()
 REDIRECT = "http://127.0.0.1:8765/callback"
 SCOPES = "tweet.read users.read bookmark.read offline.access"
 AUTH_URL = "https://x.com/i/oauth2/authorize"
@@ -120,7 +149,8 @@ def refresh(refresh_token):
 
 def authorize():
     if not CLIENT_ID:
-        die("set X_CLIENT_ID env var (see header of this file for setup)")
+        die("no client id: set X_CLIENT_ID, or connect X in Egg "
+            "(Set Up Egg > X bookmarks), which stores one both can read")
 
     verifier = base64.urlsafe_b64encode(secrets.token_bytes(48)).decode().rstrip("=")
     challenge = base64.urlsafe_b64encode(

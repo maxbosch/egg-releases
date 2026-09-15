@@ -1,5 +1,35 @@
 # Egg changelog
 
+## 0.1.7 — 2026-09-15
+
+The setup release: one checklist, and scanning that doesn't need a terminal.
+
+- Set Up Egg: a checklist of everything Egg can use — API key, coding
+  agent, phone capture, sandboxes, scanning, X — showing what works and
+  what one more step would unlock. Nothing blocks the app; skipping a row
+  is a supported answer. In the menu-bar egg, the app menu, and the empty
+  library.
+- Scanning runs in the app: "Scan Library…" in the sidebar uses the key
+  already in your Keychain. No terminal, no python3, no second paste of
+  the key. Re-running only picks up what's new; scan.py is unchanged for
+  agents.
+- Full Disk Access is noticed the moment you grant it — the checklist
+  offers the relaunch instead of leaving you to guess.
+- X bookmarks import in the app: paste your X app's Client ID once,
+  connect in the browser, then import. Shares the token file and client id
+  with fetch_bookmarks.py, so app and script are interchangeable.
+  Experimental: with no X app at all, the same window can read your
+  bookmarks page directly — no client id, no API quota.
+- Egg Mode (⌃⌥⌘E): the menu bar hides behind a wallpaper-matched cover
+  with only the egg at top right, and keystrokes echo in a keycap at
+  bottom left. For demos and recordings.
+- Egg --doctor prints your setup as JSON and exits 0 when nothing is left
+  to do, so a coding agent can configure Egg and verify its own work.
+  SETUP.md is the contract; the checklist can hand it to your agent.
+- Shelf: the empty state is just the egg mark, the panel is glass at rest
+  and solid while focused, and the Active pill is a bolt that turns green
+  when something is running.
+
 ## 0.1.6 — 2026-09-11
 
 The tester release: Egg now assumes nothing about your setup.

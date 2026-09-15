@@ -72,23 +72,41 @@ Re-running either step only picks up what's new.
 
 ## X bookmarks (optional)
 
-The import runs against your own X developer app — your credentials, your
-Mac, nothing routed through or billed to anyone else. One-time setup,
-about three minutes:
+**Set Up Egg → X bookmarks** does this without a terminal. The import runs
+against your own X app — your credentials, your Mac, your quota, nothing
+routed through or billed to anyone else. One-time setup, about three
+minutes:
 
 1. Create an app at https://console.x.com (free).
 2. In the app's auth settings, enable OAuth 2.0 with type **Native App**
    (public client), callback URL `http://127.0.0.1:8765/callback`, and
-   scopes `tweet.read users.read bookmark.read offline.access`.
-3. Copy the Client ID.
+   scopes `tweet.read users.read bookmark.read offline.access`. The window
+   has copy buttons for the last two.
+3. Paste the Client ID into the window and choose **Connect X**. Your
+   browser opens X's consent screen once; tokens are stored on your Mac and
+   refreshed locally.
 
-Then tell your agent:
+Then **Import Bookmarks**, any time. Re-running only picks up what's new,
+and never touches what you've already scanned, tagged or hearted.
 
-> Run the X bookmarks import with my client id `<yours>`, and when it
-> finishes scan what's new.
+Prefer the terminal, or want an agent to do it? `scripts/fetch_bookmarks.py`
+is the same import and now shares the app's client id and token file:
 
-A browser window opens once for you to authorize; tokens are stored on
-your Mac and refreshed locally.
+> Run the X bookmarks import, and when it finishes scan what's new.
+
+**No X app at all?** The same window has an experimental reader that opens
+your bookmarks page inside Egg, scrolls it, and imports what it can see —
+no client ID, no API quota. It reads X's page markup, so it can break when
+X changes, and videos come in as their cover image. Tell us how it goes.
+
+## Set up by checklist, or by agent
+
+**Set Up Egg…** (in the menu-bar egg, or on the empty library) shows every
+step above as a live checklist — what's working, what one more step would
+unlock. Technical? Its **Copy Agent Instructions** button hands your coding
+agent the whole setup contract, and the agent verifies its own work with
+`/Applications/Egg.app/Contents/MacOS/Egg --doctor`. The full contract is
+[SETUP.md](SETUP.md).
 
 ## What to try
 
