@@ -1,5 +1,33 @@
 # Egg changelog
 
+## 0.1.9 — 2026-09-17
+
+Opening a piece zooms into it, the app is drawn in its own icon set, and
+typing in search stopped costing a third of a second a keystroke.
+
+- The lightbox is the piece. A tile zooms up from where it sits on the board
+  instead of cutting to a dialog, the board blurs behind it rather than going
+  dark, and the piece sits on it with no card, border or grey plate around it.
+  Everything the scan knows moved into a floating glass rail on the right —
+  description, style, subjects, colours, extracted text — grouped into cards,
+  with style and subjects as chips and colours as swatches rather than names.
+- Every icon in the app is Egg's own. The UI is drawn in the Bubbles set
+  rather than SF Symbols, across the library, the shelf and the menu bar, and
+  the type is SF Pro Rounded throughout.
+- Search keeps up with typing. A keystroke cost about 330ms of work on a
+  library this size and now costs around 20ms. Thumbnails stopped thrashing
+  their cache too, which is what kept filling the grid with grey cards when
+  the pictures were on disk all along.
+- Prototypes capture what runs. A card shows the thing itself rather than a
+  stale snapshot, it opens in a window of its own, and variants stop piling
+  up in the feed. Asking for a change is a floating prompt over the live page.
+- The sidebar makes fewer claims. Hidden moved to View › Hidden Items, Themes
+  is gone, and hearted reads as Taste. Facet pills are filled and have hover
+  and press states, and a section header toggles from anywhere in its row.
+- Empty states fill the canvas instead of collapsing the stack they share
+  with the search bar, which had been sending it into the middle of the
+  window whenever a search stopped matching.
+
 ## 0.1.8 — 2026-09-15
 
 The library looks like your work now, and takes a drop from anywhere.
