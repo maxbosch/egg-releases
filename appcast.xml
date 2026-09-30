@@ -3,6 +3,24 @@
     <channel>
         <title>Egg</title>
         <item>
+            <title>0.1.10</title>
+            <pubDate>Wed, 30 Sep 2026 15:23:39 -0400</pubDate>
+            <link>https://feedegg.com/</link>
+            <sparkle:version>83</sparkle:version>
+            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <sparkle:releaseNotesLink>https://feedegg.com/Egg-0.1.10.md</sparkle:releaseNotesLink>
+            <enclosure url="https://feedegg.com/Egg-0.1.10.dmg" length="4964436" type="application/octet-stream" sparkle:edSignature="ZE39c+WAZyOitmvSfQZY1/kxviqLJAlwEemtqtac1gUh7gLFAiYqdVYfab59o/wjkzAsfPkRowE4dlcTN+lvBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://feedegg.com/Egg83-68.delta" sparkle:deltaFrom="68" length="667382" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dZtzL1kbxzZtD0SRsSbbLsJEX9QipI/NtEE/XbbnoGz3cIT+8ExMvojrrOjlGjLwKa283ccnSAMGSClwjiAWAw=="/>
+                <enclosure url="https://feedegg.com/Egg83-58.delta" sparkle:deltaFrom="58" length="1023182" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ms7BkG2Sz/EUcfpJEET6NDfoQ7w7ymhHVJDdhLXZzxwzJgp9gt2cnCY7QR+DiEvi0yz/nAIrmKEI5LsLulVlDw=="/>
+                <enclosure url="https://feedegg.com/Egg83-53.delta" sparkle:deltaFrom="53" length="1053322" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="t+J8WJcK6Q8fqBUx3dMLc+y68/bOx3FTlqxk73KEUBI9wrk5nlf4YB8mwJ40XP7jHSjjod1C1y98nkPekaQWBA=="/>
+                <enclosure url="https://feedegg.com/Egg83-40.delta" sparkle:deltaFrom="40" length="1638478" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="slXOmMdae6Y3gSca+Ylh/g32KA1oCc2gEyoMBTf3PPGYAiCTq86ClCC8WCKrqpLVpHrrNhH3+d8522XZYPcECg=="/>
+                <enclosure url="https://feedegg.com/Egg83-32.delta" sparkle:deltaFrom="32" length="2903470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="n2Xl9MNr1LrQOW4qfHB4xRwIFtjbISxJFRiiE+fie12pHxjd/qiSfr+m3GONw869IkU8oacZzfLGLg/LCWrfDw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.9</title>
             <pubDate>Thu, 17 Sep 2026 11:27:30 -0400</pubDate>
             <link>https://feedegg.com/</link>
@@ -72,23 +90,6 @@
                 <enclosure url="https://feedegg.com/Egg40-21.delta" sparkle:deltaFrom="21" length="1923046" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="x2dkv7713eUsM7+qrkp6jXFt/PGSpqSIYkFAwnneeovUJFO3/IgppbqVaeUM0H9vF6V68v6c+S8zgmWdRVCaCg=="/>
                 <enclosure url="https://feedegg.com/Egg40-18.delta" sparkle:deltaFrom="18" length="1924662" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TG80SRAfOQQigFRv7oHUdTLJf/FFQoJXSDC3kXdtKRMTkH7FGjQ5QV4Qp5B/J2AmVHpEXRaObnzqL6LulVqaAg=="/>
                 <enclosure url="https://feedegg.com/Egg40-13.delta" sparkle:deltaFrom="13" length="1921938" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="BJpM1bQZ6J9HeDZcvE0y6DVemCFTB2QtV30OA0hfitgVJULbwWvI1H2QBYUeYr5RPsr1K+J2JRwSYg0X92C5CA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.1.5</title>
-            <pubDate>Fri, 11 Sep 2026 13:06:29 -0400</pubDate>
-            <link>https://feedegg.com/</link>
-            <sparkle:version>32</sparkle:version>
-            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <sparkle:releaseNotesLink>https://feedegg.com/Egg-0.1.5.md</sparkle:releaseNotesLink>
-            <enclosure url="https://feedegg.com/Egg-0.1.5.dmg" length="4120058" type="application/octet-stream" sparkle:edSignature="aGfA6Trq2tXwNDW5J+mxk1JF7C35C/JqKqc8Im7Yb8KuBjcmrxqJabFluEQOYzaGvGKVr1YyFgxbmanRIMyZBw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://feedegg.com/Egg32-23.delta" sparkle:deltaFrom="23" length="1664618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ymzlrP7YP+3iPzknmdQ8bHSejQ1iZG7h4HCDxhH7JQI1YsvHRzPqgGFkP0/DkHO0cnl0FJsyjBt1MqAzXk5oCg=="/>
-                <enclosure url="https://feedegg.com/Egg32-21.delta" sparkle:deltaFrom="21" length="1673714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MycQWgJ/qP2fQNmBsWw4yM/yfF1SAlYY9YdqcarDWde4eirUjgYy1+fM8Cn1KeiSyklD3PjBMF0F20zdVVI8Ag=="/>
-                <enclosure url="https://feedegg.com/Egg32-18.delta" sparkle:deltaFrom="18" length="1675562" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mb0qfJWapEtMAEUTPi8ZiuLw8PXvT9h25X0S21qqmlnfnusyJxiPbVseD0YQcV4VgqBp5WFyy7zSg4aPoL/6Bw=="/>
-                <enclosure url="https://feedegg.com/Egg32-13.delta" sparkle:deltaFrom="13" length="1675682" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="FwTXJi8ZjHrYujKAZ2qRqvxPGf17lGnIz0L1qVZ4xDhEatb8ylKzgMlGL9LMXwdyMf6m/sb3RYIfzxOjsVVfAw=="/>
             </sparkle:deltas>
         </item>
     </channel>
